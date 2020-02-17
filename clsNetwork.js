@@ -71,15 +71,17 @@ class clsNetwork {
             alert("ERROR IN CLSNETWORK");
         }
     }
-
+    
+    /*
     executePerTime(time) {
-        this.loadingTimer = setInterval(this.sendRequest(), time);
+        this.loadingTimer = setTimeout(this.sendRequest(), time);
         console.log("executePerTime");
     }
 
     executePerTime(string,time) {
-        this.loadingTimer = setInterval(this.sendRequest(string), time);
+        this.loadingTimer = setTimeout(this.sendRequest(string), time);
         console.log("executePerTime");
     }
+    */
 
 }

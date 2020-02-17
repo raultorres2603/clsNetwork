@@ -17,6 +17,8 @@ class clsNetwork {
         console.log("   - .getXhttp()");
         console.log("To execute the AJAX:");
         console.log("   - .sendRequest()");
+        console.log("When AJAX is ready:");
+        console.log("   - .onReady(do_this_function())");
     }
 
     setMethod(Vmethod) {
@@ -57,7 +59,7 @@ class clsNetwork {
             this.xhttp.send(string);
             console.log("sendRequest(string)");
         } else {
-            alert("ERROR IN CLSNETWORK");
+            alert("ERROR IN CLSNETWORK - YOU CAN'T USE METHOD POST IF YOU DIDN'T SET POST IS CONSTRUCTOR");
         }
     }
 
@@ -67,7 +69,7 @@ class clsNetwork {
             this.xhttp.send();
             console.log("sendRequest()");
         } else {
-            alert("ERROR IN CLSNETWORK");
+            alert("ERROR IN CLSNETWORK - YOU CAN'T USE METHOD POST IF YOU DIDN'T SET GET IS CONSTRUCTOR");
         }
     }
 

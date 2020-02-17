@@ -14,10 +14,9 @@ class clsNetwork {
         console.log("   - Path: path/to/the/file.extension");
         console.log("   - Async: True or False");
         console.log("To return the response you can use:");
-        console.log("   - clsNetwork.getXhttp()");
-        console.log("Execute the sendRequest() in a interval of time:");
-        console.log("   - clsNetwork.executePerTime(time) // GET METHOD");
-        console.log("   - clsNetwork.executePerTime(string,time) // POST METHOD");
+        console.log("   - .getXhttp()");
+        console.log("To execute the AJAX:");
+        console.log("   - .sendRequest()");
     }
 
     setMethod(Vmethod) {
@@ -71,7 +70,7 @@ class clsNetwork {
             alert("ERROR IN CLSNETWORK");
         }
     }
-    
+
     /*
     executePerTime(time) {
         this.loadingTimer = setTimeout(this.sendRequest(), time);
@@ -83,5 +82,13 @@ class clsNetwork {
         console.log("executePerTime");
     }
     */
+
+    onReady(Ifunction) {
+        this.getXhttp().onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                Ifunction;
+            }
+        }
+    }
 
 }

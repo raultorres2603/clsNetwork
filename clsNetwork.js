@@ -85,10 +85,10 @@ class clsNetwork {
     }
     */
 
-    onReady(Ifunction) {
+    onReady(iFunction) {
         this.getXhttp().onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                Ifunction;
+                iFunction;
             }
         }
     }

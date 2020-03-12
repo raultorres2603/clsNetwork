@@ -55,8 +55,8 @@ class clsNetwork {
 
     sendRequest(string) {
         if (this.getMethod() == "POST") {
-            this.xhttp.open(this.getMethod(), this.getPath(), this.getAsync());
-            this.xhttp.send(string);
+            this.getXhttp().open(this.getMethod(), this.getPath(), this.getAsync());
+            this.getXhttp().send(string);
             console.log("sendRequest(string)");
         } else {
             alert("ERROR IN CLSNETWORK - YOU CAN'T USE METHOD POST IF YOU DIDN'T SET POST IS CONSTRUCTOR");
@@ -65,8 +65,8 @@ class clsNetwork {
 
     sendRequest() {
         if (this.getMethod() == "GET") {
-            this.xhttp.open(this.getMethod(), this.getPath(), this.getAsync());
-            this.xhttp.send();
+            this.getXhttp().open(this.getMethod(), this.getPath(), this.getAsync());
+            this.getXhttp().send();
             console.log("sendRequest()");
         } else {
             alert("ERROR IN CLSNETWORK - YOU CAN'T USE METHOD POST IF YOU DIDN'T SET GET IS CONSTRUCTOR");
